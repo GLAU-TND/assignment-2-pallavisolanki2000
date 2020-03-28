@@ -7,9 +7,35 @@
 package problem5.node;
 
 import problem1.node.TreeNode;
+import problem5.student.Student;
 
 // to define node properties
 public class Node {
-    public Node(TreeNode newnode) {
+    private Student s;
+    private Node next;
+
+
+    public Node(TreeNode s) {
+        next = null;
     }
+
+    public Student getS() {
+        return s;
+    }
+
+    public void setS(Student s) {
+        this.s = s;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+
 }
+
+

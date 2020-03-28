@@ -155,4 +155,10 @@ public class MyBinarySearchTree {
 
 
     }
+
+    public void postOrder() {
+    }
+
+    public void preOrder() {
+    }
 }
