@@ -45,5 +45,29 @@ public class Student {
         this.rollno = rollno;
     }
 
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", rollno=" + rollno +
+                ", backlog=" + backlog +
+                ", apperingcount=" + apperingcount
+                ;
+    }
 
+
+    public int getBacklog() {
+        return backlog;
+    }
+
+    public void setBacklog(int backlog) {
+        this.backlog = backlog;
+    }
+
+    public int getApperingcount() {
+        return apperingcount;
+    }
+
+    public void setApperingcount(int apperingcount) {
+        this.apperingcount = apperingcount;
+    }
 }
