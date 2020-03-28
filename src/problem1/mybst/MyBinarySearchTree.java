@@ -8,6 +8,7 @@ package problem1.mybst;
 
 import problem1.node.TreeNode;
 import problem4.myqueue.MyQueue;
+import problem5.node.Node;
 
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
@@ -81,4 +82,55 @@ public class MyBinarySearchTree {
         MyBinarySearchTree.count = ctr;
     }
 
+    public void insert(TreeNode tmproot) {
+        if (newnode == null) {
+            newnode = new TreeNode();
+        }
+
+        try {
+            if (newnode.getData() <= tmproot.getData()) {
+                System.out.println("left traversal...");
+                if (tmproot.getLeft() == null) {
+                    tmproot.setLeft(newnode);
+                    System.out.println("node inserted left");
+                    pre.enqueue(new Node(newnode));//only left insertion
+                    newnode = null;
+                    return;
+                } else {
+                    System.out.println("left not empty changing tmproot ");
+                    insert(tmproot.getLeft());
+                }
+            }
+        } catch (NullPointerException ignore) {
+        }
+
+
+        try {
+            if (newnode.getData() > tmproot.getData()) {
+                System.out.println("Right traversal...");
+                if (tmproot.getRight() == null) {
+                    tmproot.setRight(newnode);
+                    System.out.println("Node inserted right");
+                    newnode = null;
+                } else {
+                    System.out.println("Right not empty changing tmproot");
+                    insert(tmproot.getRight());
+                }
+            }
+        } catch (NullPointerException ignore) {
+        }
+
+    }
+
+    public void countNotLeft(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        countNotLeft(node.getLeft());
+        if (node.getLeft() != null) {
+            ++count;
+        }
+        countNotLeft(node.getRight());
+
+    }
 }
