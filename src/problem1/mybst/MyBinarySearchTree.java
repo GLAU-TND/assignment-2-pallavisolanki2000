@@ -15,4 +15,12 @@ public class MyBinarySearchTree {
     private TreeNode newnode, root, tmp;
     private MyQueue pre;
     private MyQueue post;
+
+    public MyBinarySearchTree() {
+        tmp = null;
+        root = null;
+        MyBinarySearchTree.count = 0;
+        post = new MyQueue();
+        pre = new MyQueue();
+    }
 }
