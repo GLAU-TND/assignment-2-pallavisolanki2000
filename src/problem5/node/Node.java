@@ -6,22 +6,24 @@
  */
 package problem5.node;
 
-import problem1.node.TreeNode;
 import problem5.student.Student;
 
 // to define node properties
 public class Node {
+
     private Student s;
     private Node next;
 
 
-    public Node(TreeNode s) {
-        next = null;
-    }
-
     public Student getS() {
         return s;
     }
+
+    public Node(Student s) {
+        this.s = s;
+        next = null;
+    }
+
 
     public void setS(Student s) {
         this.s = s;
@@ -35,7 +37,7 @@ public class Node {
         this.next = next;
     }
 
-
 }
+
 
 
