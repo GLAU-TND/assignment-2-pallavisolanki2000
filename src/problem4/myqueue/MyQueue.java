@@ -7,6 +7,7 @@
 package problem4.myqueue;
 // to create queue to store pre - order successor
 
+import problem1.node.TreeNode;
 import problem5.node.Node;
 
 public class MyQueue {
@@ -83,6 +84,31 @@ public class MyQueue {
             tmp.setNext(node);
             tmp = front;
         }
+    }
+
+    public void preOrder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        enqueue(new Node(node));
+        preOrder(node.getLeft());
+        preOrder(node.getRight());
+    }
+
+    public void printSuccessor(int data) {
+
+        tmp = front;
+        while (tmp.getNode().getData() != data && tmp != null) {
+            tmp = tmp.getNext();
+        }
+        try {
+            assert tmp != null;
+            System.out.println(tmp.getNext().getNode().getData());
+        } catch (NullPointerException ignore) {
+            System.out.println("No preorder Successor found");
+        }
+
     }
 
 
