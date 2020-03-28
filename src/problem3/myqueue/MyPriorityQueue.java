@@ -28,4 +28,18 @@ public class MyPriorityQueue {
         }
     }
 
+    public void dequeue() {
+        if (front == null) {
+            System.out.println("No entry found");
+            return;
+        }
+        do {
+            System.out.println(i++);
+            System.out.print(front.getS().getName() + ":");
+            System.out.println(front.getS().getRollno());
+            front = front.getNext();
+        }
+        while (front != null);
+    }
+
 }
