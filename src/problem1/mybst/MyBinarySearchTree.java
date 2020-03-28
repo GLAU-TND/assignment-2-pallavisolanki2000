@@ -133,4 +133,26 @@ public class MyBinarySearchTree {
         countNotLeft(node.getRight());
 
     }
+
+    public void preOrder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+
+        preOrder(node.getLeft());
+        preOrder(node.getRight());
+    }
+
+
+    public void postOrder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        postOrder(node.getLeft());
+        postOrder(node.getRight());
+
+
+    }
 }
