@@ -12,4 +12,7 @@ import problem5.node.Node;
 public class MyQueue {
     public void enqueue(Node node) {
     }
+
+    public void queuePrint(MyQueue pre) {
+    }
 }

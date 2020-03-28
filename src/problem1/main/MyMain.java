@@ -17,6 +17,15 @@ public class MyMain {
         m.setRoot();
         System.out.println("root set : " + m.getRoot().getData());
 
+        for (int i = 0; i < 5; i++) {
+            m.insert(m.getRoot());
+        }
 
+
+        queue.queuePrint(m.getPre());
+
+        m.countNotLeft(m.getRoot());
+        //printing count
+        System.out.println(m.getCount());
     }
 }
