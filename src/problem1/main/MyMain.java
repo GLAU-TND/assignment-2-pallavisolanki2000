@@ -7,6 +7,16 @@
 package problem1.main;
 // executable class
 
-public class MyMain {
+import problem1.mybst.MyBinarySearchTree;
+import problem4.myqueue.MyQueue;
 
+public class MyMain {
+    public static void main(String[] args) {
+        MyBinarySearchTree m = new MyBinarySearchTree();
+        MyQueue queue = new MyQueue();
+        m.setRoot();
+        System.out.println("root set : " + m.getRoot().getData());
+
+
+    }
 }
